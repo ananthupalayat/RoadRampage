@@ -17,10 +17,16 @@ public class CannonController : MonoBehaviour
     public Transform pShotPoint = default;
     public float pBlastPower = 20f;
 
+    private Animator mAnimator;
+
+    [SerializeField] private ParticleSystem m_MuzzleFlash;
+
+    [SerializeField] private bl_Joystick m_Joystick;
+
     // Start is called before the first frame update
     void Awake()
     {
-        
+        mAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,9 +48,9 @@ public class CannonController : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector2 input = new Vector2(
-            Input.GetAxis("Vertical"),
-            Input.GetAxis("Horizontal")
+        Vector2 input = new Vector2(m_Joystick.Vertical
+            ,
+            m_Joystick.Horizontal
         );
         const float e = 0.001f;
         ConstrainAngles();
@@ -57,7 +63,9 @@ public class CannonController : MonoBehaviour
         transform.rotation = lookRotation;
     }
 
-
+    /// <summary>
+    /// Constrains Cannons rotation
+    /// </summary>
     void ConstrainAngles()
     {
         mOrbitAngles.x =
@@ -73,8 +81,13 @@ public class CannonController : MonoBehaviour
         }
     }
 
-    private void SpawnMissile()
+    /// <summary>
+    /// Spawns Missile
+    /// </summary>
+    public void SpawnMissile()
     {
+        m_MuzzleFlash.Play();
+        mAnimator.SetTrigger("Fire");
         GameObject spawnedMissile = ObjectPool.pInstance.GetObject(m_MissilePrefab);
         spawnedMissile.transform.SetPositionAndRotation(pShotPoint.position, pShotPoint.rotation);
         spawnedMissile.GetComponent<Rigidbody>().velocity = pShotPoint.transform.forward * pBlastPower;

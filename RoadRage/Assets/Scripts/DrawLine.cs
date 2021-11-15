@@ -20,6 +20,9 @@ public class DrawLine : MonoBehaviour
         mLineRenderer = GetComponent<LineRenderer>();
     }
 
+    /// <summary>
+    /// Creates Parabolic Path using Line Renderer
+    /// </summary>
     private void Update()
     {
         mLineRenderer.positionCount = (int)m_NumPoints;
@@ -34,7 +37,7 @@ public class DrawLine : MonoBehaviour
             if (Physics.OverlapSphere(newPoint, 2, m_CollidableLayers).Length > 0)
             {
                 mLineRenderer.positionCount = points.Count;
-                //SetTargetRing(mLineRenderer.GetPosition(points.Count - 1));
+                SetTargetRing(mLineRenderer.GetPosition(points.Count - 1));
                 break;
             }
 

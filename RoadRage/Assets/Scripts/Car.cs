@@ -29,16 +29,24 @@ public class Car : MonoBehaviour
         mRigidBody.velocity = Vector3.forward * m_Carspeed; 
     }
 
-
+    /// <summary>
+    /// Detects Collision With a Missile
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Missile"))
         {
+            CameraShaker.Instance.ShakeCamera(5, 0.5f);
             OnCarHit?.Invoke(pThisCarType, transform.position);
             this.gameObject.SetActive(false);
         }
     }
 
+    /// <summary>
+    /// Detects Exit Line
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Boundary"))

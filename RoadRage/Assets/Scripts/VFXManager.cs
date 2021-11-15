@@ -11,17 +11,24 @@ public class VFXManager : MonoBehaviour
         Car.OnCarHit += SpawnExplosionVFX;
     }
 
-    // Update is called once per frame
-    void OnDisable()
-    {
-        
-    }
-
+   
+    /// <summary>
+    /// Creates Explosion VFX
+    /// </summary>
+    /// <param name="carType"></param>
+    /// <param name="position"></param>
     private void SpawnExplosionVFX(Car.CarType carType,Vector3 position)
     {
         Debug.Log(carType);
         GameObject spawnedExplosion = ObjectPool.pInstance.GetObject(m_ExplosionVFX);
         spawnedExplosion.transform.position = position;
         spawnedExplosion.GetComponent<ParticleSystem>().Play();
+        StartCoroutine(TurnOffVFX(spawnedExplosion, spawnedExplosion.GetComponent<ParticleSystem>().main.duration));
+    }
+
+    private IEnumerator TurnOffVFX(GameObject spawnedObject,float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        spawnedObject.SetActive(false);
     }
 }

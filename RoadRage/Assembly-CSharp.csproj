@@ -62,9 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FattyPolyTurretPart2Free\Scripts\Projectile.cs" />
-    <Compile Include="Assets\FattyPolyTurretPart2Free\Scripts\TurretAI.cs" />
-    <Compile Include="Assets\FattyPolyTurretPart2Free\Scripts\WASDMovement.cs" />
+    <Compile Include="Assets\OtherPackages\FattyPolyTurretPart2Free\Scripts\Projectile.cs" />
+    <Compile Include="Assets\OtherPackages\FattyPolyTurretPart2Free\Scripts\TurretAI.cs" />
+    <Compile Include="Assets\OtherPackages\FattyPolyTurretPart2Free\Scripts\WASDMovement.cs" />
+    <Compile Include="Assets\OtherPackages\UJoystick\Content\Script\Core\bl_Joystick.cs" />
+    <Compile Include="Assets\OtherPackages\UJoystick\Content\Script\Internal\bl_JoystickUtils.cs" />
+    <Compile Include="Assets\OtherPackages\UJoystick\Example\Scrips\bl_ControllerExample.cs" />
     <Compile Include="Assets\Scripts\CameraShaker.cs" />
     <Compile Include="Assets\Scripts\CannonController.cs" />
     <Compile Include="Assets\Scripts\Car.cs" />
@@ -76,8 +79,30 @@
     <Compile Include="Assets\Scripts\ObjectReturn.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\VFXManager.cs" />
-    <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
-    <None Include="Assets\FattyPolyTurretPart2Free\Readme.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\OtherPackages\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\OtherPackages\UJoystick\ReadMe.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\OtherPackages\FattyPolyTurretPart2Free\Readme.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.14f1/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -606,6 +631,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/EtherGames/RoadRampage/RoadRage/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:/EtherGames/RoadRampage/RoadRage/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/EtherGames/RoadRampage/RoadRage/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -624,17 +652,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/EtherGames/RoadRampage/RoadRage/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/EtherGames/RoadRampage/RoadRage/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/EtherGames/RoadRampage/RoadRage/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/EtherGames/RoadRampage/RoadRage/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:/EtherGames/RoadRampage/RoadRage/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/EtherGames/RoadRampage/RoadRage/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
